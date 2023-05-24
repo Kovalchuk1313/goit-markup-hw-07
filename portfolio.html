@@ -20,9 +20,20 @@
     <header class="header">
       <div class="header-container container">
         <nav class="navbar">
-          <a class="navbar-logo link" href="./index.html"
-            >Web<span class="header-span">Studio</span></a
+          <a class="navbar-logo link" href="./index.html">
+            Web<span class="header-span">Studio</span>
+          </a>
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
           >
+            <svg class="menu-svg" width="32" height="24">
+              <use class="menu-icon" href="./images/icons.svg#burger"></use>
+            </svg>
+          </button>
+
           <ul class="navbar-list list">
             <li class="navbar-item">
               <a class="navbar-link link" href="./index.html">Studio</a>
@@ -215,6 +226,7 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container container">
         <div class="footer-left">
@@ -261,11 +273,17 @@
         </div>
 
         <div class="subscribe">
-          <form action="">
+          <form>
             <p class="social-title">Subscribe</p>
             <div class="subscribe-form">
               <label for="mail" class="mail-form">
-                <input class="mail-input" type="email" name="email" placeholder="E-mail" />
+                <input
+                  class="mail-input"
+                  id="mail"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
               </label>
               <button class="submit-btn" type="submit"
                 >Subscribe
