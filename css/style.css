@@ -142,6 +142,7 @@ button {
   width: 100%;
   display: flex;
   align-items: center;
+  margin-right: auto;
 }
 .navbar-logo {
   font-family: 'Raleway', sans-serif;
@@ -208,11 +209,11 @@ button {
   background-color: var(--color-hover);
 }
 .contact {
-  margin-left: auto;
   font-style: normal;
 }
 .contact-list {
   display: none;
+  height: 72ex;
 }
 @media only screen and (min-width: 768px) {
   .contact-list {
@@ -234,6 +235,7 @@ button {
   color: var(--body-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact .link:focus,
 .contact .link:hover {
   color: var(--color-hover);
@@ -342,15 +344,20 @@ button {
   |============================
 */
 .hero {
-  padding: 188px 0;
+  padding: 112px 0;
   max-width: 1440px;
   background-color: var(--color-main);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/mob-dark-bg.png);
+    url(../images/bg/mob-dark-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  .hero {
+    padding: 188px 0;
+  }
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -389,7 +396,7 @@ button {
   }
 }
 .hero-title {
-  max-width: 317px;
+  max-width: 320px;
   font-weight: 600;
   font-size: 36px;
   line-height: 1.1;
@@ -431,17 +438,23 @@ button {
   |============================
 */
 .about-list {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 72px 24px;
 }
 .about-item {
-  width: calc(100%-30px);
+  max-width: 396px;
+}
+.about-item:not(:last-child) {
+  margin-bottom: 72px;
 }
 @media only screen and (min-width: 768px) {
+  .about-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px 24px;
+  }
   .about-item {
-    width: 356px;
+    max-width: 356px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -467,10 +480,16 @@ button {
   text-align: center;
   margin-bottom: 8px;
   font-weight: 600;
-  font-style: 36px;
+  font-size: 36px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--color-main);
+}
+@media only screen and (max-width: 1199px) {
+  .about-subtitle {
+    font-weight: 600;
+    color: #434455;
+  }
 }
 @media only screen and (min-width: 768px) {
   .about-title {
@@ -486,6 +505,7 @@ button {
     line-height: 1.2;
   }
 }
+
 /**
   |============================
   | SCOPE
@@ -947,11 +967,6 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-}
-@media only screen and (min-width: 428px) and (max-width: 767px) {
-  .modal {
-    width: 392px;
-  }
 }
 @media only screen and (min-width: 768px) {
   .modal {
