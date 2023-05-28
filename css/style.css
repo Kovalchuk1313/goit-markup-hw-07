@@ -213,7 +213,6 @@ button {
 }
 .contact-list {
   display: none;
-  height: 72ex;
 }
 @media only screen and (min-width: 768px) {
   .contact-list {
@@ -438,23 +437,22 @@ button {
   |============================
 */
 .about-list {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 72px 24px;
 }
 .about-item {
   max-width: 396px;
 }
-.about-item:not(:last-child) {
-  margin-bottom: 72px;
-}
 @media only screen and (min-width: 768px) {
   .about-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 72px 24px;
   }
   .about-item {
-    max-width: 356px;
+    max-width: 340px;
   }
 }
 @media only screen and (min-width: 1200px) {
